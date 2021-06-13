@@ -1,0 +1,1 @@
+hecquyn_270_pcs_f102\startup_stm32f102xb.o: startup_stm32f102xb.s
