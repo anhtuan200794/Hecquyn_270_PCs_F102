@@ -9,12 +9,12 @@ from google.cloud import texttospeech
 client = texttospeech.TextToSpeechClient()
 
 # Set the text input to be synthesized
-synthesis_input = texttospeech.SynthesisInput(text="Chào mừng bạn đến với máy tập thông minh Zeus để kết nối với cả thế giới. Khi bạn luyện tập có thể không cầm theo được điện thoại hay laptop, nhưng thần Zeus vẫn giúp bạn gọi điện, nhắn tin, chat zalo, viber hay check mail, lướt Facebook một cách dễ dàng. Bạn có thể chọn bỏ qua màn hình khai báo thông tin ban đầu bằng việc ấn vào mũi tên quay ngược ở dưới màn hình. Để thực hiện đồng bộ hóa điện thoại với máy tập, bạn mở điện thoại, bật chế độ Bluetooth để kết nối điện thoại với máy tập. Tiếp theo bạn ấn vào ô có chữ Applications để vào Zalo, Viber bằng cách check mã QR và đăng nhập Email, Facebook, Messenger. Để gọi điện bạn vào mục Sport one để ấn số gọi trực tiếp hoặc tìm tên theo danh bạ đã đồng bộ")
+synthesis_input = texttospeech.SynthesisInput(text= "Chúc mừng bạn đã hoàn thành buổi tập . Bạn không nên ngồi xuống ngay hãy đi lại nhẹ nhàng và hít thở đều. Bước 8, bạn sử dụng máy mát xa năm đến mười phút để thả lỏng cơ bằng cách khoác dây đai mát xa vào người và ấn công tắc mở để bắt đầu mát xa, di chuyển dây đai mát xa đến các vị trí như bụng ,lưng vai gáy , mông đùi, mỗi vị trí mát xa khoảng một phút rồi di chuyển dây đai đến vị trí khác. Bước 9. Khi tập luyện xong bạn nên uống nước lọc ,không lên uống nước có ga . Chú ý: khi uống nước theo ngụm nhỏ uống từ từ , không lên uống nhanh. Với 30 phút tập luyện mỗi ngày bạn sẽ có một dáng vóc hoàn hảo, đặc biệt tốt cho hệ tim mạch, tăng cường trao đổi chất, giúp cơ thể cải thiện hệ thống xương khớp, tăng sự dẻo dai cho cơ thể. Nếu bạn là một chuyên gia thường xuyên luyện tập có thể bỏ qua chức năng Huấn luyện viên để quan tâm đến các chức năng theo dõi tim mạch calo bằng cách nhấn nút Stop 3 giây khi khởi động máy để bỏ qua Trợ lý ảo nhé")
 
 # Build the voice request, select the language code ("en-US") and the ssml
 # voice gender ("neutral")
 voice = texttospeech.VoiceSelectionParams(
-    language_code="vi-VN", ssml_gender=texttospeech.SsmlVoiceGender.FEMALE
+    language_code="vi-VN", ssml_gender=texttospeech.SsmlVoiceGender.MALE
 )
 
 # Select the type of audio file you want returned
