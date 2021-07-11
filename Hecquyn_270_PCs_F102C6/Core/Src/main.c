@@ -1,26 +1,24 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-    @file           : main.c
-    @brief          : Main program body
+  * @file           : main.c
+  * @brief          : Main program body
   ******************************************************************************
-    @attention
-
-    <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-    All rights reserved.</center></h2>
-
-    This software component is licensed by ST under BSD 3-Clause license,
-    the "License"; You may not use this file except in compliance with the
-    License. You may obtain a copy of the License at:
-                           opensource.org/licenses/BSD-3-Clause
-
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
+  *
   ******************************************************************************
-  // Code 6666
-*/
+  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -88,6 +86,7 @@ uint32_t tickForCongratulate = 0;
 uint32_t tickForProgramTimeout = 0;
 uint32_t startick = 0;
 uint8_t mp3_cmd_buf[10] = {0x7E, 0xFF, 0x06, 0x00, 0x01, 0x0, 0x0, 0x00, 0x00, 0xEF};
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -126,6 +125,7 @@ void MP3_play(uint8_t index);
 void MP3_setVol(uint8_t vol);
 void MP3_reset(void);
 void SetDefaulData(void);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -302,7 +302,7 @@ int main(void)
         }
         HAL_Delay(150);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2)))) //          key = Program
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_1)))) //          key = Program
       {
         key = 6;
         if (isStart == false && isSetup == false)
@@ -395,7 +395,7 @@ int main(void)
         isMode = false;
         //HAL_Delay(100);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_1)))) // Key Mode
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2)))) // Key Mode
       {
         key = 9;
         if (isStart == false && isMode == false) // setup
@@ -534,7 +534,7 @@ int main(void)
         HAL_Delay(150);
       }
 
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2)))) //          key 6 Program
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_1)))) //          key 6 Program
       {
         key = 6;
         HAL_Delay(200);
@@ -576,7 +576,7 @@ int main(void)
         isMode = false;
         //HAL_Delay(100);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_1)))) // Key 9  Mode
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2)))) // Key 9  Mode
       {
         key = 9;
         HAL_Delay(200);
@@ -735,7 +735,7 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
-	__HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pins : PA0 PA1 PA2 PA3
                            PA4 PA5 PA6 PA7
@@ -747,11 +747,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-	/*Configure GPIO pin : PB0 */
+  /*Configure GPIO pin : PB0 */
   GPIO_InitStruct.Pin = GPIO_PIN_0;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
@@ -855,7 +856,10 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-
+  __disable_irq();
+  while (1)
+  {
+  }
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -871,7 +875,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
-     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
