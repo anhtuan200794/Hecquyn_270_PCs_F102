@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "arcane-talent-285111",
+  "private_key_id": "76cb17e4feb997f855ad1e020761eeda26678839",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCxJle1gCSAt2pf\nramvtIKwuIv8OWzI3loyr+jbNBk3fyVWpYLvV2dxEyFvUTXOzirry4/q8u0NYfuR\nsPVBPt1p+pzNusx2zQNbFqSi0jKxZ3SXPyIs1T2EiYV4TsbnZL467ScKG+sRwWfs\nVbrlJ1mWdU4vrv+4CmcGI9WiF7ZMhdM41TVNHdsuxeFolNb99/Gl3zVCpq4DTei5\nVAy09QlsADeguIlchXpCwoPKA9kj9z1QTzSzrLpVlS2s8P3Vs4GeHq0LPFUdZ+hW\n22buuJK0r3Nv65mTD23IGn2YlMNTj2nj4eSsjNwHP1829cmcDs3JXxOd8QPjwwcZ\nJKyCn+8bAgMBAAECggEAQodgVDEaRF7dq64YNn0Hwd+k7uYQFUXwQO3wePZRbBar\niqVhDYrZNc2V9mzc1Nx3oRNTasytuyNrq5T2HnlCBQ2R+u9m30zyMDDKRr3DPP3Z\n+v1CU+0Hi/Frtzl6mKcsjAvJaBIBD6t/YHH33RyQmCFY6i6CKfd6JoOptRTLqWPO\n7kJJ1ZChq0CTaiFowS8+6aUnAWGXKxiIa2uWn1s8VOnE37Xd9nPP9GG+CVznRgog\nbav4py7iOQNlWuRvi1TKx3UqrGui4VSv/+XUPadH5rBSPQ+rDXuq6toHF1hknSw3\nv+PmecVfKDCqLWwRkLEK0TxWBOQTLOjNHdlCNd9BpQKBgQDXxtnrRHu5Tu2D1TFq\nWffdNCL+bBvDdPQqgOomI+eYE2FRHnp7PGKFS4GMr9jhIxi7UR3Ddf/CKUH/DDws\nU0oIhaEoRx2yNTSqVFLfYyCivva5YTKzANs4wbEASkSrgikG3fNCQwUmW1KOw8jE\n2xB8VJUNQ7yIH/GQ23D+TzBUJwKBgQDSLClAT2NSdwOSCY73Dx9ZoQ4Mp9MW+6D9\nwbcCd+y1SmQKydYxJ0zVSsdZjx6pps+uYtp8GneXYruDT71+YU5/DuP6ywMwinAL\nWDxmyW2z31CnJ45fxQ2eoOA9pDDRJsJhljC4T2oLzwKd2Nm0dtOQWszUmy4x+pSz\n8IKyAE8h7QKBgE4KbpCn0TPBdygCOIAlj/8iNzHbueLkbtbcj1NCEyYuhDkJk/T0\nbxGUsINIqmErB2vgN6qVB+6aa3MqYq0JZrJUWmgt6HCmy6h7HQoMWSZjeOqtW9/g\nBGmvrCvVsKZzShFgvvWNNdScnOxjpT6FmJ3PHaWRhSOaogzpQSHJVEprAoGBALqm\nUXQ1jMV9wIP/TSIIIhVdPLbsjEEK8yyozri4fFV8XWBfY4N/nXKG2Iem3NpZtHLw\ng4xXjQG6w0CYnncQP8ADH2BozspbB6prkCjQlkZ5+oyYSo6u16uav8q+eEQmodY8\npcPpcwpNq8s2/BCSvsyiduoRbnMgUNOEsu0V7TD5AoGBAMrEQ0MXX+9VO5l+nImJ\ndvBuzwfSczcuBwqzJKL1yD7VLwnWqpEw9YtYwz2tbvUF9GT/SxKoXWXheuxD81wc\nx/54cKRYytj9CXF6KOJJ3OVkkQ3v5kvjxX82ySkE7PuKksjYkzjW1R8daeLG+zaR\nizRgVhhiCONYhPXD5rM+UWrF\n-----END PRIVATE KEY-----\n",
+  "client_email": "tuan-58@arcane-talent-285111.iam.gserviceaccount.com",
+  "client_id": "117641790681657391577",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tuan-58%40arcane-talent-285111.iam.gserviceaccount.com"
+}
