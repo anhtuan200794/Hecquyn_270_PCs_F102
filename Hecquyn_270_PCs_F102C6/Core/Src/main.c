@@ -289,7 +289,7 @@ int main(void)
         HAL_Delay(200);
       }
       /*  Check Key keyPadData from the second pin */
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_7 | GPIO_PIN_1)))) // Incline +
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_1)))) // Incline +
       {
         //remindTick = HAL_GetTick();
         sw = 4;
@@ -334,7 +334,7 @@ int main(void)
         }
         HAL_Delay(200);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_1)))) //key Start;
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_1)))) //key Start;
       {
         startick = tickForCline = tickForPlusMinus = tickForCongratulate = remindTick = HAL_GetTick();
         sw = 7;
@@ -356,15 +356,15 @@ int main(void)
         }
         HAL_Delay(200);
       }
-			else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_2))))
+			else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_2))))
 			{
 				sw = 8;
 				isFemale = !isFemale;
 				HAL_Delay(150);
 			}
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_2)))) //key Stop;
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_7 | GPIO_PIN_1)))) //key Stop;
       {
-        sw = 9;
+        sw = 5;
         isPressStop = true;
         HAL_Delay(200);
         if (isPressStop)
@@ -403,9 +403,9 @@ int main(void)
         isStartWithMode = false; 
         //HAL_Delay(100);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2)))) // Key Mode
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_8 | GPIO_PIN_1)))) // Key Mode
       {
-        sw = 10;;
+        sw = 12;
         if (isStart == false && isMode == false) // setup
         {
           isSetup = true;
@@ -432,10 +432,10 @@ int main(void)
         HAL_Delay(200);
       }
       /*  Check Key keyPadData from the third pin */
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_1)))) // Incline -
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_2)))) // Incline -
       {
         //remindTick = HAL_GetTick();
-        sw = 5;
+        sw = 8;
         HAL_Delay(150);
         if (isStart)
         {
@@ -473,7 +473,7 @@ int main(void)
       else if (!(keyPadData & ((uint32_t)(GPIO_PIN_8 | GPIO_PIN_2))) ) // key -
       {
         //remindTick  = HAL_GetTick();
-        sw = 12;
+        sw = 16;
         nVol -= 2;
         if (nVol <= 0)
           nVol = 0;
@@ -536,25 +536,25 @@ int main(void)
         HAL_Delay(200);
       }
       /*  Check Key keyPadData from the second pin */
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_7 | GPIO_PIN_1))))
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_1)))) //in +
       {
         sw = 4;
         HAL_Delay(150);
       }
 
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_1)))) //          key 6 Program
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_1)))) //          key Program
       {
         sw = 6;
         HAL_Delay(200);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_1)))) //key 7 Start;
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_1)))) //key 7 Start;
       {
         sw = 7;
         HAL_Delay(200);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_2)))) //key 8 Stop;
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_7 | GPIO_PIN_1)))) //key 8 Stop;
       {
-        sw = 9;
+        sw = 5;
         isPressStop = true;
         MP3_stop();
         HAL_Delay(200);
@@ -584,20 +584,20 @@ int main(void)
         isMode = false;
         //HAL_Delay(100);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2)))) // Key 9  Mode
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_8 | GPIO_PIN_1)))) //key Mode
       {
         sw = 10;
         HAL_Delay(200);
       }
       /*  Check Key keyPadData from the third pin */
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_1)))) //key 1
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_2)))) //key in-
       {
-        sw = 5;
+        sw = 8;
         HAL_Delay(150);
       }
-      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_5 | GPIO_PIN_2))))
+      else if (!(keyPadData & ((uint32_t)(GPIO_PIN_4 | GPIO_PIN_1)))) //in+
       {
-        sw = 9;
+        sw = 4;
         HAL_Delay(150);
       }
       else if (!(keyPadData & ((uint32_t)(GPIO_PIN_6 | GPIO_PIN_2))))
